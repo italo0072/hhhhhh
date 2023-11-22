@@ -1,0 +1,52 @@
+/* Estilos CSS para los botones de favorito */
+
+.boton-favorito {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Agregamos la propiedad transform para la animación */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .boton-favorito .icono-corazon {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  .boton-favorito.deshabilitado {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .boton-favorito.btn-outline-primary {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+  }
+  
+  .boton-favorito.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .boton-favorito.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .boton-favorito.btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Agregamos estilos para la animación de clic */
+  .boton-favorito:active {
+    transform: scale(2); /* Reducimos el tamaño del botón al presionarlo */
+  }
+  

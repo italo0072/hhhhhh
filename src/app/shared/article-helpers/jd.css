@@ -1,0 +1,11 @@
+/* Estilos CSS para la vista previa de artículos */
+
+
+  /* Cambiar el color del título y la descripción a blanco opaco */
+  .article-preview h1,
+  .article-preview p {
+    color: rgba(255, 255, 255, 0.9); /* Blanco con opacidad del 90% */
+  }
+  
+  /* Otros estilos para .article-preview a:hover y otros elementos aquí */
+  

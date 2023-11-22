@@ -1,0 +1,89 @@
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">E-CONNECT</a>
+
+    <!-- Show this for logged out users -->
+    <ul *appShowAuthed="false" class="nav-list"
+    class="nav navbar-nav pull-xs-right">
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">
+          inicio
+        </a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" routerLinkActive="active">
+          iniciar sesion
+        </a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register" routerLinkActive="active">
+          registrarse
+        </a>
+      </li>
+    </ul>
+    
+
+    <!-- Show this for logged in users -->
+    <ul *appShowAuthed="true"
+      class="nav navbar-nav pull-xs-right">
+
+      <!-- Agregar la barra de búsqueda solo para usuarios autenticados -->
+<!-- Barra de búsqueda -->
+<div class="search-bar">
+  <input [(ngModel)]="searchQuery" class="form-control" type="text" placeholder="Buscar usuario ">
+  <button class="btn btn-outline-primary" (click)="searchUser()">Buscar</button>
+</div>
+
+<!-- Resto del contenido del encabezado -->
+<!-- ... -->
+
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          inicio
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/editor"
+          routerLinkActive="active">
+          <i class="ion-compose"></i>&nbsp;nuevo post
+        </a>
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link"
+          routerLink="/settings"
+          routerLinkActive="active">
+          <i class="ion-gear-a"></i>&nbsp;editar
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"
+          [routerLink]="['/profile', currentUser.username]"
+          routerLinkActive="active">
+          <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
+          {{ currentUser.username }}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"
+        (click)="logout()"
+          routerLinkActive="active">
+          <i class="ion-compose"></i>&nbsp;salir
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

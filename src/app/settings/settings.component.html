@@ -1,0 +1,82 @@
+<div class="settings-page">
+  <div class="background-image">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-xs-12">
+
+          <h1 class="text-center">Tus Configuraciones</h1>
+
+          <div class="card">
+            <div class="card-body">
+
+              <app-list-errors [errors]="errors"></app-list-errors>
+
+              <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+
+                <div class="form-group">
+                  <label for="image">URL de tu foto de perfil</label>
+                  <input class="form-control"
+                    type="text"
+                    id="image"
+                    placeholder="URL de tu foto de perfil"
+                    formControlName="image" />
+                </div>
+
+                <div class="form-group">
+                  <label for="username">Nombre de usuario</label>
+                  <input class="form-control"
+                    type="text"
+                    id="username"
+                    placeholder="Nombre de usuario"
+                    formControlName="username" />
+                </div>
+
+                <div class="form-group">
+                  <label for="bio">Breve biografía sobre ti</label>
+                  <textarea class="form-control"
+                    id="bio"
+                    rows="8"
+                    placeholder="Breve biografía sobre ti"
+                    formControlName="bio">
+                  </textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Correo electrónico</label>
+                  <input class="form-control"
+                    type="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                    formControlName="email" />
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Nueva contraseña</label>
+                  <input class="form-control"
+                    type="password"
+                    id="password"
+                    placeholder="Nueva contraseña"
+                    formControlName="password" />
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block"
+                  type="submit">
+                  Actualizar Configuraciones
+                </button>
+              </form>
+
+              <!-- Line break for logout button -->
+              <hr />
+
+              <button class="btn btn-outline-danger btn-block"
+                (click)="logout()">
+                O haz clic aquí para cerrar sesión.
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

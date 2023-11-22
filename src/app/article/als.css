@@ -1,0 +1,153 @@
+/* Estilos para la página de artículo */
+.article-page {
+    background-color: #f7f7f7;
+    padding: 20px 0;
+    min-height: 100vh;
+  }
+  
+  /* Estilos para el encabezado del artículo */
+  /* Estilo para la sección de banner transparente */
+.banner {
+    background-color: rgba(51, 51, 51, 0.7); /* Fondo semitransparente */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  
+  .banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .banner a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+  }
+  
+  .banner a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para la información del artículo */
+  .app-article-meta {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .app-article-meta a {
+    color: #007bff;
+  }
+  
+  .app-article-meta a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para el cuerpo del artículo */
+  .article-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para la lista de etiquetas */
+  .tag-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .tag-default {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  /* Estilos para los botones de acción */
+  .article-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btn-edit-article {
+    background-color: #007bff;
+    color: #fff;
+    margin-right: 10px;
+  }
+  
+  .btn-edit-article:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-delete-article {
+    background-color: #ff3030;
+    color: #fff;
+  }
+  
+  .btn-delete-article:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Estilos para los comentarios */
+  .comment-form {
+    margin-top: 20px;
+  }
+  
+  .comment-form textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .comment-form .card-footer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .comment-author-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  /* Estilos para el mensaje de registro/inicio de sesión */
+  .sign-in-message {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .sign-in-message a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .sign-in-message a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Estilo para la página de artículo con imagen de fondo */
+.article-page {
+    background-image: url('https://images7.alphacoders.com/102/1025190.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: 20px 0;
+    min-height: 100vh;
+  }
+  
+  /* Resto de los estilos (los anteriores) permanecen igual */
+  

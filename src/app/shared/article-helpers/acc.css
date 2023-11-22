@@ -1,0 +1,36 @@
+/* Estilos CSS para la vista previa de artículos */
+
+.contenedor-articulo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .imagen-autor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .informacion-articulo {
+    flex: 1;
+  }
+  
+  .nombre-autor {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .nombre-autor:hover {
+    color: #0056b3;
+  }
+  
+  .fecha-publicacion {
+    color: #888;
+    font-size: 14px;
+  }
+  

@@ -1,0 +1,104 @@
+<div class="pagina-inicio">
+
+  <div class="encabezado" *appShowAuthed="false">
+  
+  </div>
+
+  <!-- Resto del contenido de la página -->
+
+  <div class="contenedor pagina">
+    <div class="fila">
+
+      <div class="col-md-9">
+        <div class="alternar-flujo">
+          <ul class="nav nav-pills activo-contorno">
+            
+
+            <!-- Nuevo botón principal -->
+            <li class="item-nav">
+              <a class="boton-nav"
+                 [ngClass]="{'activo': listConfig.type === 'introduction'}"
+                 (click)="setListTo('introduction')">
+                 Introducción
+              </a>
+            </li>
+
+            <li class="item-nav">
+              <a class="boton-nav"
+                 [ngClass]="{'activo': listConfig.type === 'feed'}"
+                 (click)="setListTo('feed')">
+                 post
+              </a>
+            </li>
+            <li class="nav-item" [hidden]="!listConfig.filters.tag">
+              <a class="nav-link active">
+                <i class="ion-pound"></i> {{ listConfig.filters.tag }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <!-- Lista de artículos (post) -->
+<div *ngIf="listConfig.type === 'feed'">
+  <!-- Aquí puedes agregar el contenido para la página "post" -->
+  <app-article-list [limit]="10" [config]="listConfig"></app-article-list>
+
+</div>
+
+
+        <!-- Contenido de la introducción -->
+   <!-- HTML -->
+   <div *ngIf="listConfig.type === 'introduction'" class="introduction-section">
+    <h2>Bienvenido al foro</h2>
+    <p>Le damos la bienvenida a nuestro foro donde podrá participar en conversaciones estimulantes, aprender de las perspicaces ideas de otros, plantear sus preguntas más intrigantes e impartir su experiencia a personas con ideas afines. Explore todas las oportunidades que nuestro foro tiene reservadas para usted uniéndose a nosotros ahora mismo.
+    </p>
+  
+    <p>Descubrirá un lugar donde las mentes convergen y las ideas crecen en nuestro animado foro. Todos son bienvenidos a explorar, aprender y compartir aquí, sin importar si son principiantes curiosos o expertos en su campo. Hoy, forme parte de esta comunidad rica y diversa, donde existen innumerables oportunidades de aprendizaje y desarrollo.
+    </p>
+    
+    <img src="https://i.pinimg.com/750x/89/59/47/89594775797a496374c4858b10ac809c.jpg" alt="Descripción de la imagen">
+  <p></p>
+    <a href="/login" class="btn-join">Únete al foro</a>
+    <p></p>
+    <h2>Integrantes</h2>
+    <div class="members-list">
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Fátima Del Carmen Ayala Santos">
+        <p>Fátima Del Carmen Ayala Santos</p>
+      </div>
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Josué Esaú Batres Guardado">
+        <p>Josué Esaú Batres Guardado</p>
+      </div>
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Fátima Del Carmen Ayala Santos">
+        <p>Italo Antonio Guevara Garcia</p>
+      </div>
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Josué Esaú Batres Guardado">
+        <p>Julio César Sánchez Campos
+        </p>
+      </div>
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Fátima Del Carmen Ayala Santos">
+        <p>Julissa Yamileth Hernández Claros </p>
+      </div>
+      <div class="member">
+        <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" alt="Josué Esaú Batres Guardado">
+        <p>Saúl Oswaldo López Hernández</p>
+      </div>
+
+      
+      <!-- Repite este bloque para cada miembro -->
+    </div>
+  </div>
+  
+
+
+        <!-- Lista de artículos (post) -->
+      </div>
+    </div>
+  </div>
+</div>

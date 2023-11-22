@@ -1,0 +1,71 @@
+/* Estilos para la página de perfil */
+.profile-page {
+    background-color: #996d6d;
+    padding: 20px 0;
+  }
+  
+  /* Estilos para la información del usuario */
+  .user-info {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ac6969; /* Cambia el color del texto para que sea visible en la imagen de fondo */
+  }
+  
+  .user-header {
+    text-align: center;
+  }
+  
+  .user-img {
+    max-width: 150px;
+    border-radius: 50%;
+  }
+  
+  .user-bio {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #070101;
+  }
+  
+  /* Estilos para los botones de acción */
+  .action-btn {
+    margin-top: 10px;
+  }
+  
+  /* Estilos para la navegación de pestañas */
+  .articles-toggle {
+    margin-top: 20px;
+  }
+  
+  .nav-pills {
+    background-color: transparent;
+    border-bottom: none;
+  }
+  
+  .nav-link {
+    color: #333;
+    font-weight: bold;
+    border-radius: 0;
+    margin-right: 10px;
+  }
+  
+  .nav-link.active {
+    background-color: #007bff;
+    color: #000000;
+  }
+  
+  /* Estilos para el contenido de la página */
+  .container {
+    margin-top: 20px;
+  }
+  
+  /* Estilos para la caja de sombra en la información del usuario */
+  .user-info {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Establece la imagen de fondo */
+  .profile-page {
+    background-color: #575552; /* Cambia #FFA500 al color que desees */
+  }
+  

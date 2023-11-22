@@ -1,0 +1,63 @@
+/* Estilo de la página de edición */
+.editor-page {
+    background-color: #30642c;
+    padding: 30px 0;
+  }
+  
+  /* Estilo del formulario */
+  .container.page {
+    background-color: rgba(14, 14, 14, 0.7); /* Fondo semitransparente */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Estilo del título */
+  legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ddbd8c;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo de los campos del formulario */
+  .form-group input,
+  .form-group textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  /* Estilo de las etiquetas */
+  .tag-default {
+    background-color: #ddbd8c;
+    color: #320ed1;
+    border: 1px solid #ddbd8c;
+    padding: 3px 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+  }
+  
+  /* Estilo del botón de publicación */
+  .btn-primary {
+    background-color: #ddbd8c;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ddbd8c;
+  }
+  
+
+  /* Estilo de la página de edición */
+.editor-page {
+    background-image: url('https://images4.alphacoders.com/111/1116473.jpg'); /* Agrega la URL de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto fija la imagen de fondo */
+    padding: 200px 0;
+  }
+  
+  /* Resto de los estilos (como se mostraron anteriormente) */
+  /* ... */
+  

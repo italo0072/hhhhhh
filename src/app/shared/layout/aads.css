@@ -1,0 +1,89 @@
+/* Estilos CSS para la barra de navegación */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente con un 80% de opacidad */
+    backdrop-filter: blur(5px); /* Agrega un efecto de desenfoque al fondo */
+    padding: 10px 0;
+    color: #fff; /* Cambia el color del texto según tu preferencia */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    transition: top 0.3s ease; /* Agrega una transición suave al cambiar la posición */
+  }
+  
+  /* Resto de los estilos para tu barra de navegación aquí */
+  
+  /* Cambia el color de fondo cuando el usuario hace scroll hacia abajo */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente con un 80% de opacidad al hacer scroll */
+    top: -80px; /* Oculta la barra de navegación al hacer scroll hacia abajo */
+  }
+  
+  body {
+    margin: 0; /* Asegura que no haya margen superior */
+    padding-top: 80px; /* Agrega espacio superior para compensar la barra de navegación */
+  }
+  
+  /* Cambia la posición y opacidad al hacer scroll hacia arriba */
+  body.scrolled {
+    padding-top: 0; /* Elimina el espacio superior */
+  }
+/* Estilos para la lista de navegación */
+.nav-list {
+    list-style: none;
+    padding: 300;
+    margin: 300;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-right: 20px; /* Espaciado entre los elementos de navegación */
+  }
+  
+  /* Estilos para los enlaces de navegación */
+  .nav-link {
+    text-decoration: none;
+    color: #c5b78b; /* Cambia el color del texto según tu preferencia */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+  }
+  
+  .nav-link:hover {
+    color: #ffffff; /* Cambia el color del texto al pasar el mouse por encima */
+  }
+  
+  /* Estilos para el enlace activo */
+  .nav-link.active {
+    color:  #333; /* Cambia el color del texto para el enlace activo */
+  }
+    
+/* Alinear la barra de búsqueda a la derecha */
+.search-item {
+  margin-left: auto;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+/* Otros estilos que desees aplicar al menú */
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+/* Ajusta los márgenes, espaciados, y otros estilos según tus necesidades */

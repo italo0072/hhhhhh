@@ -1,0 +1,63 @@
+<div class="article-page">
+  <div class="banner">
+    <div class="container">
+      <h1 class="article-title">{{ article.title }}</h1>
+      <app-article-meta [article]="article">
+        <span *ngIf="canModify" class="article-actions">
+          <a class="btn btn-edit-article" [routerLink]="['/editor', article.slug]">
+            <i class="ion-edit"></i> Editar Artículo
+          </a>
+          <button class="btn btn-delete-article" [ngClass]="{disabled: isDeleting}" (click)="deleteArticle()">
+            <i class="ion-trash-a"></i> Borrar Artículo
+          </button>
+        </span>
+        <span *ngIf="!canModify" class="article-actions">
+          <app-follow-button [profile]="article.author" (toggle)="onToggleFollowing($event)"></app-follow-button>
+          <app-favorite-button [article]="article" (toggle)="onToggleFavorite($event)">
+            {{ article.favorited ? 'Quitar de Favoritos' : 'Agregar a Favoritos' }} Artículo <span class="favorites-count">({{ article.favoritesCount }})</span>
+          </app-favorite-button>
+        </span>
+      </app-article-meta>
+    </div>
+  </div>
+
+  <div class="container page">
+    <div class="row article-content">
+      <div class="col-md-12">
+        <div [innerHTML]="article.body | markdown"></div>
+        <ul class="tag-list">
+          <li *ngFor="let tag of article.tagList" class="tag-default tag-pill tag-outline">
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+      <div class="col-xs-12 col-md-8 offset-md-2">
+        <div *appShowAuthed="true">
+          <app-list-errors [errors]="commentFormErrors"></app-list-errors>
+          <form class="card comment-form" (ngSubmit)="addComment()">
+            <fieldset [disabled]="isSubmitting">
+              <div class="card-block">
+                <textarea class="form-control" placeholder="Escribe un comentario..." rows="3" [formControl]="commentControl"></textarea>
+              </div>
+              <div class="card-footer">
+                <img [src]="currentUser.image" class="comment-author-img" />
+                <button class="btn btn-sm btn-primary" type="submit">Publicar Comentario</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div *appShowAuthed="false">
+          <p>Inicio de sesión <a [routerLink]="['/login']">aquí</a> o <a [routerLink]="['/register']">regístrate</a> para agregar comentarios a este artículo.</p>
+        </div>
+
+        <app-article-comment *ngFor="let comment of comments" [comment]="comment" (deleteComment)="onDeleteComment(comment)"></app-article-comment>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="auth-page" style="background-image: url('https://i.pinimg.com/750x/c6/da/fe/c6dafe836f155876873082828a7cc3bf.jpg'); background-size: cover; background-position: center; height: 100vh;">
+  <div class="container page">
+    <div class="row">
+
+      <div class="col-md-6 offset-md-3 col-xs-12">
+        <div class="text-center">
+          <h1 style="font-size: 36px; color: #333;">{{ title }}</h1>
+          <p>
+            <a [routerLink]="['/login']" *ngIf="authType === 'register'" style="color: #007BFF; text-decoration: none;">¿Tienes una cuenta?</a>
+            <a [routerLink]="['/register']" *ngIf="authType === 'login'" style="color: #007BFF; text-decoration: none;">¿Necesitas una cuenta?</a>
+          </p>
+        </div>
+        <app-list-errors [errors]="errors"></app-list-errors>
+        <form [formGroup]="authForm" (ngSubmit)="submitForm()">
+          <fieldset [disabled]="isSubmitting">
+            <fieldset class="form-group mx-auto" *ngIf="authType === 'register'">
+              <input
+                formControlName="username"
+                placeholder="Nombre de usuario"
+                class="form-control form-control-lg"
+                type="text" />
+            </fieldset>
+            <fieldset class="form-group mx-auto">
+              <input
+                formControlName="email"
+                placeholder="Correo electrónico"
+                class="form-control form-control-lg"
+                type="text" />
+            </fieldset>
+            <fieldset class="form-group mx-auto">
+              <input
+                formControlName="password"
+                placeholder="Contraseña"
+                class="form-control form-control-lg"
+                type="password" />
+            </fieldset>
+            <button class="btn btn-lg btn-primary btn-block" [disabled]="!authForm.valid" type="precionar" style="background-color: #272727;">
+              {{ title }}
+            </button>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="profile-page">
+  <div class="user-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+          <div class="user-header">
+            <div class="user-image">
+              <img [src]="profile.image" class="user-img" alt="{{ profile.username }}" />
+            </div>
+            <h4>{{ profile.username }}</h4>
+            <p class="user-bio">{{ profile.bio }}</p>
+            <app-follow-button
+              [hidden]="isUser"
+              [profile]="profile"
+              (toggle)="onToggleFollowing($event)">
+            </app-follow-button>
+            <a [routerLink]="['/settings']"
+              [hidden]="!isUser"
+              class="btn btn-sm btn-outline-secondary action-btn">
+              <i class="ion-gear-a"></i> Editar Perfil
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
+        <div class="articles-toggle">
+          <ul class="nav nav-pills outline-active">
+            <li class="nav-item">
+              <a class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/profile', profile.username]">
+                Mis Publicaciones
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                [routerLink]="['/profile', profile.username, 'favorites']">
+                Publicaciones Favoritas
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
